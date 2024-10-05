@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    
     fetch('http://localhost:8000/api/login', {
       method: 'POST',
       headers: {
@@ -26,8 +27,9 @@ function Login() {
       .then((data) => {
         setMessage(data.message);
         setError('');
-       
         console.log('Login successful:', data.token);
+        onLogin();
+        navigate('/home');
       })
       .catch((error) => {
         setError(error.message);
