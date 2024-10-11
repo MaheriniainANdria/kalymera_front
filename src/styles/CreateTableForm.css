@@ -1,0 +1,52 @@
+.create-table-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background-color: #f8f9fa; /* Couleur d'arrière-plan */
+    font-family: Arial, sans-serif; /* Police d'écriture */
+    padding: 20px; /* Espacement interne */
+  }
+  
+  .create-table-form h1 {
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #343a40; /* Couleur du texte */
+  }
+  
+  .create-table-form form {
+    background: white; /* Couleur d'arrière-plan du formulaire */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour le formulaire */
+    padding: 20px; /* Espacement interne du formulaire */
+    width: 300px; /* Largeur fixe pour le formulaire */
+  }
+  
+  .create-table-form label {
+    margin-bottom: 10px; /* Espacement entre les labels */
+    display: flex;
+    flex-direction: column; /* Alignement vertical des éléments */
+  }
+  
+  .create-table-form input,
+  .create-table-form select {
+    padding: 10px; /* Espacement interne pour les inputs */
+    margin-top: 5px; /* Espacement entre le label et l'input */
+    border: 1px solid #ced4da; /* Bordure des inputs */
+    border-radius: 4px; /* Coins arrondis */
+  }
+  
+  .create-table-form button {
+    background-color: #28a745; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Supprimer la bordure */
+    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+    border-radius: 4px; /* Arrondir les coins */
+    cursor: pointer; /* Changer le curseur au survol */
+    margin-top: 15px; /* Espacement au-dessus du bouton */
+    transition: background-color 0.3s; /* Transition pour le survol */
+  }
+  
+  .create-table-form button:hover {
+    background-color: #218838; /* Couleur du bouton au survol */
+  }

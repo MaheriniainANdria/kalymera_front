@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './../styles/CreateTableForm.css';
 
 const CreateTableForm = () => {
   const [name, setName] = useState('');
@@ -43,7 +44,7 @@ const CreateTableForm = () => {
   };
 
   return (
-    <div>
+    <div className='create-table-form'>
       <h1>Create a New Dining Table</h1>
       <form onSubmit={handleSubmit}>
         <label>

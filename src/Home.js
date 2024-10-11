@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './styles/Home.css';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="home-page">
       <h1>Welcome to the Home Page</h1>
       <button>Client</button>
       <button onClick={goToManagerPage}>Manager</button>
