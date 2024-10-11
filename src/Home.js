@@ -1,12 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Home() {
+const Home = () => {
+  const navigate = useNavigate();
+
+  const goToManagerPage = () => {
+    navigate('/manager');
+  };
+
   return (
     <div>
-      <h2>Welcome to Home Page</h2>
-      <p>You are successfully logged in!</p>
+      <h1>Welcome to the Home Page</h1>
+      <button>Client</button>
+      <button onClick={goToManagerPage}>Manager</button>
     </div>
   );
-}
+};
 
 export default Home;
