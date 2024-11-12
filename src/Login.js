@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles/Login.css';
 
-function Login({ onLogin }) {
+const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -21,28 +20,26 @@ function Login({ onLogin }) {
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Invalid credentials');
+          return response.json().then((errorData) => {
+            throw new Error(errorData.error || 'Login failed');
+          });
         }
         return response.json();
       })
       .then((data) => {
-        setMessage(data.message);
-        setError('');
-        console.log('Login successful:', data.token);
+        setMessage('Login successful!');
         onLogin();
         navigate('/home');
       })
       .catch((error) => {
-        setError(error.message);
-        setMessage('');
+        setMessage(error.message);
       });
   };
 
   return (
     <div className="login-page">
       <h2>Login</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {message && <p style={{ color: 'green' }}>{message}</p>}
+      {message && <p>{message}</p>}
       <form onSubmit={handleLogin}>
         <div>
           <label>Username:</label>
@@ -66,6 +63,6 @@ function Login({ onLogin }) {
       </form>
     </div>
   );
-}
+};
 
 export default Login;

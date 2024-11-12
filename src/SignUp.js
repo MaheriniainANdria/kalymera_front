@@ -13,14 +13,14 @@ const SignUp = () => {
 
     fetch('http://localhost:8000/api/signup', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password }),
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Failed to sign up');
+          return response.json().then((errorData) => {
+            throw new Error(errorData.error || 'Failed to sign up');
+          });
         }
         return response.json();
       })
