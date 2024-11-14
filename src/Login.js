@@ -68,6 +68,9 @@ const Login = ({ onLogin }) => {
             </div>
             <button type="submit">Login</button>
           </form>
+          <p className="signup-link">
+            Or create an account? <a href="/signup">Click here</a>
+          </p>
         </div>
       </div>
     </div>
