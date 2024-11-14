@@ -1,0 +1,40 @@
+.all-tables-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4A90E2;
+  }
+  
+  .tables-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .tables-list th, .tables-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .tables-list th {
+    background-color: #4A90E2;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: bold;
+  }
+  
+  .tables-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .tables-list tr:hover {
+    background-color: #ddd;
+  }

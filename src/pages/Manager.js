@@ -9,10 +9,15 @@ const Manager = () => {
     navigate('/create-table');
   };
 
+  const goToAllTables = () => {
+    navigate('/all-tables');
+  };
+
   return (
     <div className="manager-page">
       <h1>Manager Dashboard</h1>
       <button onClick={goToCreateTableForm}>Create Dining Table</button>
+      <button onClick={goToAllTables}>All the tables</button>
     </div>
   );
 };

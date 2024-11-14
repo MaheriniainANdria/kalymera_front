@@ -5,6 +5,7 @@ import HomePage from './HomePage';
 import Home from './Home';
 import Manager from './pages/Manager';
 import CreateTableForm from './pages/CreateTableForm';
+import AllTables from './pages/AllTables';
 import SignUp from './SignUp';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/home" element={isAuthenticated ? <Home /> : <Navigate to="/login" />} />
           <Route path="/manager" element={isAuthenticated ? <Manager /> : <Navigate to="/login" />} />
           <Route path="/create-table" element={isAuthenticated ? <CreateTableForm /> : <Navigate to="/login" />} />
+          <Route path="/all-tables" element={isAuthenticated ? <AllTables /> : <Navigate to="/login" />} />
         </Routes>
       </div>
     </Router>
