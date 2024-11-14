@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles/SignUp.css';
 import kalymeraLogo from './assets/kalymera.jfif';
+import Footer from './components/Footer';
 
 const SignUp = () => {
   const [username, setUsername] = useState('');
@@ -71,6 +72,7 @@ const SignUp = () => {
             Already have an account? <a href="/login">Login here</a>
           </p>
         </div>
+        <Footer />
       </div>
     </div>
   );

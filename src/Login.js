@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles/Login.css';
 import kalymeraLogo from './assets/kalymera.jfif';
+import Footer from './components/Footer';
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -72,6 +73,7 @@ const Login = ({ onLogin }) => {
             Or create an account? <a href="/signup">Click here</a>
           </p>
         </div>
+        <Footer />
       </div>
     </div>
   );
