@@ -1,29 +1,72 @@
 .manager-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    background-color: #f8f9fa; /* Couleur d'arrière-plan */
-    font-family: Arial, sans-serif; /* Police d'écriture */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #605B72; /* Fond de la page */
+}
+
+.manager-container {
+  display: flex;
+  width: 1250px; /* Largeur plus grande du container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #2B2738; /* Couleur du cadre */
+  overflow: hidden;
+  padding-top: 35px;
+  padding-right: 35px;
+  padding-bottom: 35px;
+}
+
+.manager-content {
+  width: 70%;
+  padding: 100px;
+  color: white;
+  text-align: center;
+}
+
+.manager-content h1 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.manager-content p {
+  font-size: 1.1em;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.manager-content button {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #6E54B5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manager-content button:hover {
+  background-color: #5a48a2;
+}
+
+.manager-image {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2B2738;
+  overflow: hidden;
+  border-radius: 4%;
   
-  .manager-page h1 {
-    margin-bottom: 30px; /* Espacement sous le titre */
-    color: #343a40; /* Couleur du texte */
-  }
-  
-  .manager-page button {
-    background-color: #28a745; /* Couleur de fond du bouton */
-    color: white; /* Couleur du texte du bouton */
-    border: none; /* Supprimer la bordure */
-    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
-    border-radius: 4px; /* Arrondir les coins */
-    cursor: pointer; /* Changer le curseur au survol */
-    margin: 10px; /* Espacement entre les boutons */
-    transition: background-color 0.3s; /* Transition pour le survol */
-  }
-  
-  .manager-page button:hover {
-    background-color: #218838; /* Couleur du bouton au survol */
-  }
+}
+
+.manager-image img {
+  width: 120%;
+  height: auto;
+  object-fit: cover;
+}

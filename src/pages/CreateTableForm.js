@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './../styles/CreateTableForm.css';
+import Footer from './../components/Footer';
 
 const CreateTableForm = () => {
   const [name, setName] = useState('');
@@ -97,6 +98,7 @@ const CreateTableForm = () => {
         <br />
         <button type="submit">Create Table</button>
       </form>
+      <Footer />
     </div>
   );
 };

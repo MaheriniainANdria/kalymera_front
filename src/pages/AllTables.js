@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './../styles/AllTables.css';
+import Footer from './../components/Footer';
 
 const AllTables = () => {
   const [tables, setTables] = useState([]);
@@ -41,6 +42,7 @@ const AllTables = () => {
           ))}
         </tbody>
       </table>
+      <Footer />
     </div>
   );
 };
